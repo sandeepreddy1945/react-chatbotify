@@ -14,9 +14,9 @@ export default ({mode}) => {
     build: {
       lib: {
         entry: path.resolve(__dirname, "src/index.tsx"),
-        name: "react-chatbotify",
+        name: "reactchatbotify",
         fileName: "index",
-        formats: ["es", "cjs"],
+        formats: ["es", "cjs", "iife"],
       },
       rollupOptions: {
         external: [
@@ -30,7 +30,7 @@ export default ({mode}) => {
           globals: {
             react: "React",
           },
-          intro: 'import "./style.css";',
+          // intro: 'import "./style.css";',
         },
       },
       outDir: "../dist",
